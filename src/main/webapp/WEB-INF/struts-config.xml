@@ -1,0 +1,17 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts  Configuration 1.3 //EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="Std" type="formbeans.Student" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/StudentReg" name="Std" scope="session" input="/index.jsp"
+			validate="true" 
+			type="controller.StudentRegController">
+			<forward name="success" path="/success.jsp" redirect="true"/>
+		</action>
+	</action-mappings>
+	<message-resources parameter="resources/Messages" />
+	<message-resources parameter="resources/Messages_fr" />
+
+</struts-config>
